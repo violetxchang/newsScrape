@@ -9,7 +9,7 @@ $(document).ready(function(){
     initPage();
     function initPage(){
         articleContainer.empty();
-        $.get("/api/headlines?saved=true").then(function(data){
+        $.get("/api/articles?saved=true").then(function(data){
             if(data && data.length){
                 renderArticles(data);
             } else {

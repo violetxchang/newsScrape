@@ -1,14 +1,14 @@
-<nav class="navbar navbar-inverse">
-<div class="container-fluid">
-    <div class="navbar-header">
-    <a class="navbar-brand" href="/">Mongo Scraper</a>
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Mongo Scraper</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li class="active"><a href="/saved">Saved Articles</a></li>
+            <li class="active"><a href="/api/fetch" class="btn btn-danger scrape-new">Scrape New Articles</a></li>
+        </ul>
     </div>
-    <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="/saved">Saved Articles</a></li>
-        <li><a href="/api/fetch" class="btn btn-danger scrape-new">Scrape New Articles</a></li>
-    </ul>
-</div>
 </nav>
 
 <div class="jumbotron text-center">
@@ -18,7 +18,7 @@
     </div>
     <div class="caption">
         <h1 class="jumboTronText">Mongo Scraper</h1>
-        <p>New York Times Edition</p>
+        <p class="jumbotronCopy">New York Times Edition</p>
     </div>
 </div>
 
@@ -26,23 +26,21 @@
 
 
 </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <h1 class="scrapedHeader">New York Times Mongo Scraper</h1>
 
-         <ul>
-{{#each articles}}
-  	<li>
-  	   <a href="http://www.nytimes.com/"{{link}} class="articleLink" target="_blank">Title: {{title}}</a> <button data-id="{{_id}}">Save</button>
-         <p class="articleSummary">summary: {{summary}}</p>
-  	</li>
-
-{{/each}}
-</ul>   
+<footer class="footer">
+    <div class="container">
+        {{#each articles}}
+        <div id="articleDiv">
+        <strong>Title</strong> <a href="http://www.nytimes.com/" {{link}} class="articleLink" target="_blank">{{title}}</a> <button
+            data-id="{{_id}}" id="saveNote">Save</button>
+        <p class="articleSummary"><strong>Summary</strong> {{summary}}</p>
         </div>
-        </footer>
+    {{/each}}
+    </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+    crossorigin="anonymous"></script>
 <script src="/assets/javascript/index.js"></script>

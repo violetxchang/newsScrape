@@ -1,28 +1,101 @@
+#articleDiv{
+    background-color: #f1c40f;
+    margin-top:2em;
+    padding: 1.2em;
+    font-family: 'PT Sans', sans-serif;
+}
+
 body{
-    background-color: lightgray;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #34495e;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .container{
-    margin:3em 6em 6em 15em;
+    margin:3em 6em 5em 12em;
     width: 80%;
 }
 
 .jumboTronText{
-    font-size: 5em;
+    font-size: 7em;
+    color: #e74c3c;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    letter-spacing: .1em;
 }
 
 .scrapedHeader{
     text-align:center;
+    color: white;
 }
 
 .articleLink{
+    font-family: 'Inconsolata', monospace;
     font-weight:bolder;
     font-size: 1.5em;
-    color: darkgreen;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
 .articleSummary{
     font-size:1em;
+    color: #2c3e50;
+}
+
+.caption{
+    color:#e74c3c;
+    text-transform: lowercase;
+    letter-spacing:.4em;
+}
+
+.navbar{
+    background-color: #bdc3c7;
+    font-weight: bolder;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    margin:0;
+}
+
+a:hover{
+    color:#d35400;
+}
+
+.jumbotronCopy{
+    color:#2c3e50;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.jumbotron{
+    margin:0;
+}
+
+button{
+    background-color: #34495e;
+    color: white;
+    /* border: 2px solid white; */
+    text-align:center;
+    margin:.2em;
+    line-height: 2em;
+    vertical-align: .2em;
+}
+
+button:hover{
+    background-color:white;
+    color: #e74c3c;
+    /* border: 2px solid white; */
+    text-align:center;
+    margin:.2em;
+    line-height: 2em;
+    vertical-align: .2em;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.active{
+    color: white;
+}
+
+.btn-danger:hover{
+    color:#e74c3c;
 }
