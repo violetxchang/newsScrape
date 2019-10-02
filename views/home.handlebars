@@ -17,7 +17,7 @@
     <div class="background-image">
     </div>
     <div class="caption">
-        <h1>Mongo Scraper</h1>
+        <h1 class="jumboTronText">Mongo Scraper</h1>
         <p>New York Times Edition</p>
     </div>
 </div>
@@ -29,14 +29,13 @@
     
     <footer class="footer">
         <div class="container">
-            <p>New York Times Mongo Scraper</p>
+            <h1 class="scrapedHeader">New York Times Mongo Scraper</h1>
 
             
 {{#each articles}}
   	<li>
-  	   <a href="http://www.nytimes.com/"{{link}}>Title: {{title}}</a> 
-         summary: {{summary}}
-         <button data-id="{{_id}}">Save</button>
+  	   <a href="http://www.nytimes.com/"{{link}} class="articleLink" target="_blank">Title: {{title}}</a> <button data-id="{{_id}}">Save</button>
+         <p class="articleSummary">summary: {{summary}}</p>
   	</li>
 
 {{/each}}

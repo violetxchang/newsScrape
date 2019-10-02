@@ -1,12 +1,12 @@
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
     <div class="navbar-header">
-    <a class="navbar-brand" href="/">Saved Articles</a>
+    <a class="navbar-brand" href="/">Mongo Scraper</a>
     </div>
     <ul class="nav navbar-nav">
         <li class="active"><a href="/">Home</a></li>
         <li><a href="/saved">Saved Articles</a></li>
-        <li><a href="/scrape" class="btn btn-danger scrape-new">Scrape New Articles</a></li>
+        <li><a href="/api/fetch" class="btn btn-danger scrape-new">Scrape New Articles</a></li>
     </ul>
 </div>
 </nav>
@@ -17,16 +17,29 @@
     <div class="background-image">
     </div>
     <div class="caption">
-        <h1>Mongo Scraper</h1>
+        <h1 class="jumboTronText">Mongo Scraper</h1>
         <p>New York Times Edition</p>
     </div>
 </div>
 
-<div class="container-fluid article-container"></div>
+<div class="container-fluid article-container">
+
+
+</div>
     
     <footer class="footer">
         <div class="container">
-            <p>New York Times Mongo Scraper</p>
+            <h1 class="scrapedHeader">New York Times Mongo Scraper</h1>
+
+         {{#if this.saved}}   
+{{#each articles}}
+  	<li>
+  	   <a href="http://www.nytimes.com/"{{link}} class="articleLink" target="_blank">Title: {{title}}</a>
+         <p class="articleSummary">summary: {{summary}}</p>
+  	</li>
+
+{{/each}}
+{{/if}}
         </div>
         </footer>
 
