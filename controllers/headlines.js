@@ -44,6 +44,7 @@ module.exports={
             _id: -1
         })
         .exec(function(err,doc){
+            console.log("cb",doc)
             cb(doc);
         })
     },

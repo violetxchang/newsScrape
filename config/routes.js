@@ -12,7 +12,14 @@ var notesController = require("../controllers/notes");
 module.exports = function (router) {
 //this route renders the homepage
 router.get("/", function (req, res) {
-    res.render("home")
+    //violet, this is the landing page to show all articles
+    headlinesController.get({}, function(docs){
+        console.log("home",docs)
+        res.render("home", {
+            articles: docs
+        })
+    })  
+  
 });
 
 //this route renders the saved handlebars page
