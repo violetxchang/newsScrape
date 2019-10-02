@@ -13,9 +13,26 @@ module.exports={
                 articles[i].saved=false;
             }
 
-            Headline.collection.insertMany(articles,{ordered: false}, function(err, docs){
-                cb(err, docs);
-            })
+      
+
+
+
+              Headline.collection
+              .remove({})
+              .then(() =>  Headline.collection.insertMany(articles)
+              
+              )
+              .then(docs => {
+                
+                console.log("docs",docs)
+                cb( docs);
+              })
+              .catch(err => {
+                console.error(err);
+              
+              });
+
+
         })
     },
     delete: function(query,cb){

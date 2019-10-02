@@ -7,6 +7,8 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var headlineSchema = new Schema({
   // `title` is required and of type String
+
+  /*Violet, I added a link property since you need to link back to the original article */
   title: {
     type: String,
     required: true,
@@ -15,6 +17,10 @@ var headlineSchema = new Schema({
 summary: {
     type: String,
     required: true
+},
+link: {
+  type: String,
+  required: true
 },
 date: String,
 saved: {

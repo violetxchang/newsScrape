@@ -1,7 +1,9 @@
 //controller for notes
-
-var Note=require("/models/Note");
-var makeDate=require("../../scripts/date");
+/*
+Violet, you forgot the .. for models folder since are inside of the controller
+*/
+var Note=require("../models/Note");
+var makeDate=require("../scripts/date");
 
 module.exports={
     get: function(data,cb){

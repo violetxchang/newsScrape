@@ -2,7 +2,11 @@
 var scrape = require("../scripts/scrape");
 
 //bring articles and notes from the controller
-var headlinesController = require("../controllers/");
+/*
+Violet you need to call the file name headlines since you are not using index.
+index.js allows you to link all the files in folder(controller, component, models..etc) together, By default, index is called
+from a folder*/
+var headlinesController = require("../controllers/headlines");  
 var notesController = require("../controllers/notes");
 
 module.exports = function (router) {
@@ -17,15 +21,16 @@ res.render("home")
     });
 
     router.get("/api/fetch", function (req, res) {
-        headlinesController.fetch(function (req, res) {
-            if (!docs || docs.insertedCount === 0) {
+        /*
+        Violet, I changed the callback argument to return tje docs(array of objects from scrap). If nothing is returned, it will do the if otherwise it will do the else.
+        */ 
+        headlinesController.fetch(function (docs) {
+            if ( !docs) {
                 res.json({
                     message: "No new articles today. Check back tomorrow!"
                 });
             } else {
-                res.json({
-                    message: "Added " + docs.insertedCount + " new articles!"
-                });
+                res.render("home", {articles: docs.ops})
             }
         });
     });
