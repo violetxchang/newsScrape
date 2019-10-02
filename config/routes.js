@@ -32,6 +32,8 @@ router.get("/api/fetch", function (req, res) {
                 message: "No new articles today. Check back tomorrow!"
             });
         } else {
+
+        //  res.json(docs.ops)
             res.render("home", {
                 articles: docs.ops
             })

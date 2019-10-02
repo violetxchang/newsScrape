@@ -31,7 +31,7 @@
         <div class="container">
             <h1 class="scrapedHeader">New York Times Mongo Scraper</h1>
 
-            
+         <ul>
 {{#each articles}}
   	<li>
   	   <a href="http://www.nytimes.com/"{{link}} class="articleLink" target="_blank">Title: {{title}}</a> <button data-id="{{_id}}">Save</button>
@@ -39,6 +39,7 @@
   	</li>
 
 {{/each}}
+</ul>   
         </div>
         </footer>
 
